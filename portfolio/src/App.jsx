@@ -597,7 +597,7 @@ function FloatingSocial() {
     { href: "https://github.com/tonnyheru", img: "https://cdn.simpleicons.org/github/ffffff", label: "GitHub", external: true },
     { href: "https://instagram.com/tonnyheru", img: "https://cdn.simpleicons.org/instagram/ffffff", label: "Instagram", external: true },
     { href: "https://linkedin.com/in/tonnyheru", img: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg", label: "LinkedIn", external: true },
-    { href: "contact", img: "https://cdn.simpleicons.org/gmail/ffffff", label: "Email", external: false },
+    { href: "https://mail.google.com/mail/?view=cm&to=tonnyheru29@gmail.com", img: "https://cdn.simpleicons.org/gmail/ffffff", label: "Email", external: true },
   ];
 
   const handleClick = (s) => {

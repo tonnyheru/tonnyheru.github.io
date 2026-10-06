@@ -71,7 +71,7 @@ export default function AboutSection() {
     { icon: "🎓", text: "IPK 3.65 · S1 Teknik Informatika UNIBI" },
     { icon: "🏛️", text: "Proyek aktif di Pengadilan Negeri Bale Bandung" },
     { icon: "🔗", text: "Integrasi API Disdukcapil Cimahi" },
-    { icon: "📍", text: "Bandung, Indonesia" },
+    { icon: "📍", text: "Bandung, WestJava, Indonesia" },
   ];
 
   return (
@@ -150,12 +150,20 @@ export default function AboutSection() {
 
             <p style={{ fontSize:14, color:"#555", lineHeight:1.9, marginBottom:14, textAlign:"justify" }}>
               Lulusan S1 Teknik Informatika dari <strong style={{ color:"#111" }}>UNIBI Bandung</strong> dengan IPK{" "}
-              <strong style={{ color:"crimson" }}>3.65</strong> dan pengalaman membangun sistem yang aktif berjalan di production.
+              <strong style={{ color:"crimson" }}>3.65</strong> — bukan sekadar nilai di atas kertas, tapi hasil dari
+              kebiasaan membangun sistem yang benar-benar berjalan di dunia nyata, bukan cuma tugas kuliah.
+            </p>
+            <p style={{ fontSize:14, color:"#555", lineHeight:1.9, marginBottom:14, textAlign:"justify" }}>
+              Salah satu bukti nyatanya: selama magang di <strong style={{ color:"#111" }}>Pengadilan Negeri Bale Bandung</strong>,
+              saya merancang dan membangun <strong style={{ color:"crimson" }}>Aplikasi Layung Peradilan</strong> dari nol —
+              mulai dari requirement gathering, desain database, development full stack, integrasi API Disdukcapil,
+              hingga aplikasi ini resmi digunakan dan di-maintain hingga sekarang.
             </p>
             <p style={{ fontSize:14, color:"#555", lineHeight:1.9, marginBottom:24, textAlign:"justify" }}>
-              Selama magang di <strong style={{ color:"#111" }}>Pengadilan Negeri Bale Bandung</strong>, saya membangun{" "}
-              <strong style={{ color:"crimson" }}>Aplikasi Layung Peradilan</strong> — mulai dari requirement gathering,
-              desain database, development full stack, integrasi Disdukcapil, hingga deployment & maintenance.
+              Sebelum terjun ke development, saya sempat menekuni dunia visual sebagai{" "}
+              <strong style={{ color:"#111" }}>Graphic Designer</strong>, lalu beralih ke bidang teknis sebagai teknisi.
+              Dua pengalaman yang terasa jauh dari coding, tapi justru membentuk fondasi yang saya pakai sampai sekarang:
+              ketelitian, kecepatan problem solving, dan kedisiplinan menghadapi deadline.
             </p>
 
             {/* Fun facts */}

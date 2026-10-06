@@ -535,7 +535,7 @@ function AboutSection() {
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="./CV/CV__M.TonnyHeruSusanto.pdf"
+                href="./CV/cv_tonnyheru.pdf"
                 download
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 style={{ background: "linear-gradient(135deg, crimson, #ff4d6d)" }}
@@ -770,9 +770,8 @@ function ResumeSection() {
 
             <ResumeBlock title="Kontak" icon="📞">
               {[
-                { icon: "📱", text: "08562122827" },
                 { icon: "✉️", text: "tonnyheru29@gmail.com" },
-                { icon: "📍", text: "Sekeloa, Coblong, Bandung" },
+                { icon: "📍", text: "Bandung, West Java, Indonesia" },
               ].map((c) => (
                 <p key={c.text} className="flex items-center gap-2 text-sm text-white/70 py-1">{c.icon} {c.text}</p>
               ))}
@@ -961,9 +960,8 @@ function ContactSection() {
                   { icon: "🐙", text: "github.com/tonnyheru", href: "https://github.com/tonnyheru" },
                   { icon: "📸", text: "instagram.com/tonnyheru", href: "https://instagram.com/tonnyheru" },
                   { icon: "💼", text: "linkedin.com/in/tonnyheru", href: "https://www.linkedin.com/in/tonny-heru-a83279297/" },
-                  { icon: "✉️", text: "tonnyheru29@gmail.com", href: "mailto:tonnyheru29@gmail.com" },
-                  { icon: "📱", text: "08562122827" },
-                  { icon: "📍", text: "Coblong, Bandung" },
+                  { icon: "✉️", text: "tonnyheru29@gmail.com", href: "https://mail.google.com/mail/?view=cm&to=tonnyheru29@gmail.com" },
+                  { icon: "📍", text: "Bandung, West Java, Indonesia" },
                 ].map((c) => (
                   <div key={c.text} className="flex items-center gap-2.5 text-[13px] text-[#9ca3af]">
                     <span className="w-4 text-center">{c.icon}</span>

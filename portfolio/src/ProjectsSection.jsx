@@ -1,4 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
+const SmartHome3D = lazy(() => import("./SmartHome3D"));
+
 
 const PROJECTS = [
   {
@@ -81,9 +83,41 @@ const PROJECTS = [
     linkLabel: null,
     color: "#7c3aed",
   },
+  {
+    id: 5,
+    title: "Smart Home 3D + IoT",
+    subtitle: "Interactive 3D Villa & Full IoT Smart Home Dashboard",
+    category: "3D/WebGL",
+    featured: true,
+    status: "demo",
+    statusLabel: "Interactive 3D",
+    org: "Personal Portfolio Project",
+    duration: "2026",
+    role: "3D & Full Stack Developer",
+    score: null,
+    description: "Aplikasi web interaktif 3D Smart Home Modern & IoT Control Center. Pengguna dapat mengeksplorasi villa 3D secara bebas dengan kontrol kamera orbit/zoom/fly-to pada 6 ruangan (Living Room, Bedroom, Kitchen, Bathroom, Garage, Smart Control Room), mengklik objek 3D untuk menyalakan lampu, AC inverter, Smart OLED TV, smart door lock, CCTV, tirai motorized, dan monitoring energi real-time dengan sinkronisasi dua arah ke dashboard glassmorphism futuristik.",
+    highlights: [
+      "Arsitektur 6 Ruangan 3D: Living Room, Bedroom, Kitchen, Bathroom, Garage, Smart Control Room",
+      "Interaksi Raycasting 3D: Klik langsung pada objek lampu, AC, TV, kunci pintu, tirai, dan gerbang garasi",
+      "Camera Controller: Orbit, zoom, pan, dan cinematic fly-to ke setiap ruangan secara mulus",
+      "Sinkronisasi State 2 Arah: Setiap aksi pada 3D model langsung sinkron dengan Dashboard UI",
+      "Smart Lighting Studio: On/Off per ruangan, slider brightness 0-100%, dan 6 preset warna cahaya",
+      "Climate Inverter AC: Pengaturan suhu 16-30°C, simulasi suhu ruangan, dan partikel hembusan angin",
+      "Smart OLED TV: Simulasi layar animasi dinamis (Cyber Stream, Matrix Rain, Ambient, CCTV)",
+      "Perimeter Security: Biometric Door Lock, animasi pintu terbuka, CCTV scanline, dan event logs",
+      "Energy Monitoring: Kalkulasi wattage real-time, daily kWh, monthly cost, dan kurva konsumsi 24 jam",
+      "Day / Night Cycle: Transisi dinamis pencahayaan matahari/bulan, langit, bayangan, dan neon glow",
+    ],
+    stack: ["Three.js","React","WebGL","Tailwind CSS","Lucide Icons","Canvas API","Web Audio API"],
+    images: [{ src:"./images/smarthome-3d.svg", caption:"3D Smart Home + IoT Dashboard" }],
+    link: null,
+    linkLabel: null,
+    color: "#00d4ff",
+    is3D: true,
+  },
 ];
 
-const CATEGORIES = ["Semua","Web App","Frontend","Backend"];
+const CATEGORIES = ["Semua","Web App","Frontend","Backend","3D/WebGL"];
 
 function hexToRgb(hex) {
   return `${parseInt(hex.slice(1,3),16)},${parseInt(hex.slice(3,5),16)},${parseInt(hex.slice(5,7),16)}`;
@@ -93,6 +127,7 @@ function StatusBadge({ status, label }) {
   const colors = {
     production: { bg:"rgba(5,150,105,0.1)", border:"rgba(5,150,105,0.3)", text:"#059669", dot:"#22c55e" },
     live: { bg:"rgba(64,121,255,0.1)", border:"rgba(64,121,255,0.3)", text:"#4079ff", dot:"#3b82f6" },
+    demo: { bg:"rgba(0,212,255,0.1)", border:"rgba(0,212,255,0.3)", text:"#00b8d9", dot:"#00d4ff" },
     default: { bg:"rgba(0,0,0,0.05)", border:"rgba(0,0,0,0.1)", text:"#666", dot:"#aaa" },
   };
   const c = colors[status]||colors.default;
@@ -114,15 +149,17 @@ function ProjectModal({ project, onClose }) {
     return () => { document.body.style.overflow=""; window.removeEventListener("keydown",onKey); };
   }, [onClose]);
 
+  const is3DProject = project.is3D;
+
   return (
     <div ref={overlayRef} onClick={(e)=>{ if(e.target===overlayRef.current) onClose(); }}
-      style={{ position:"fixed",inset:0,zIndex:99999,background:"rgba(0,0,0,0.5)",backdropFilter:"blur(6px)",display:"flex",alignItems:"center",justifyContent:"center",padding:20,animation:"modalFadeIn 0.25s ease forwards" }}>
+      style={{ position:"fixed",inset:0,zIndex:99999,background:"rgba(0,0,0,0.7)",backdropFilter:"blur(8px)",display:"flex",alignItems:"center",justifyContent:"center",padding:20,animation:"modalFadeIn 0.25s ease forwards" }}>
       <style>{`
         @keyframes modalFadeIn { from{opacity:0} to{opacity:1} }
         @keyframes modalSlideUp { from{opacity:0;transform:translateY(24px) scale(0.97)} to{opacity:1;transform:translateY(0) scale(1)} }
         .modal-scroll::-webkit-scrollbar{width:4px} .modal-scroll::-webkit-scrollbar-thumb{background:#ddd;border-radius:4px}
       `}</style>
-      <div style={{ width:"100%",maxWidth:760,maxHeight:"90vh",background:"white",border:"1px solid rgba(0,0,0,0.08)",borderRadius:20,overflow:"hidden",display:"flex",flexDirection:"column",animation:"modalSlideUp 0.3s ease forwards",boxShadow:"0 32px 80px rgba(0,0,0,0.2)" }}>
+      <div style={{ width:"100%",maxWidth:is3DProject?1080:760,maxHeight:"94vh",background:"white",border:"1px solid rgba(0,0,0,0.08)",borderRadius:20,overflow:"hidden",display:"flex",flexDirection:"column",animation:"modalSlideUp 0.3s ease forwards",boxShadow:"0 32px 80px rgba(0,0,0,0.2)" }}>
         {/* Header */}
         <div style={{ padding:"24px 28px 20px",borderBottom:"1px solid #f0f0f0",display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:16,flexShrink:0,background:`linear-gradient(135deg, rgba(${hexToRgb(project.color)},0.05) 0%, white 60%)` }}>
           <div>
@@ -171,7 +208,19 @@ function ProjectModal({ project, onClose }) {
               ))}
             </div>
           </div>
-          {project.images.length>0 && (
+          {/* 3D Interactive Scene OR static screenshots */}
+          {is3DProject ? (
+            <div>
+              <p style={{ fontSize:11,fontWeight:700,color:"#00b8d9",textTransform:"uppercase",letterSpacing:"0.12em",marginBottom:10 }}>🎮 3D Interactive Demo</p>
+              <Suspense fallback={
+                <div style={{ aspectRatio:"16/9",borderRadius:12,background:"#0a0e1a",display:"flex",alignItems:"center",justifyContent:"center",border:"1px solid rgba(0,212,255,0.2)" }}>
+                  <span style={{ color:"#00d4ff",fontFamily:"monospace",fontSize:12 }}>⟳ Loading 3D Scene...</span>
+                </div>
+              }>
+                <SmartHome3D />
+              </Suspense>
+            </div>
+          ) : project.images.length>0 && (
             <div>
               <p style={{ fontSize:11,fontWeight:700,color:"#bbb",textTransform:"uppercase",letterSpacing:"0.12em",marginBottom:10 }}>Screenshot</p>
               <div style={{ borderRadius:12,overflow:"hidden",background:"#f5f5f5",aspectRatio:"16/9",position:"relative",marginBottom:10 }}>
@@ -202,6 +251,16 @@ function ProjectModal({ project, onClose }) {
   );
 }
 
+function SmartHomeThumbnail() {
+  return (
+    <div style={{ width:"100%", aspectRatio:"16/9", borderRadius:10, overflow:"hidden", marginBottom:16, position:"relative", background:"#0a0e1a", border:"1px solid rgba(0,212,255,0.2)" }}>
+      <img src="./images/smarthome-3d.svg" alt="3D Smart Home IoT Dashboard" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
+      <div style={{ position:"absolute", inset:0, background:"linear-gradient(to top, rgba(0,212,255,0.08) 0%, transparent 60%)", pointerEvents:"none" }} />
+      <div style={{ position:"absolute", top:8, left:8, background:"rgba(0,0,0,0.6)", border:"1px solid rgba(0,212,255,0.4)", color:"#00d4ff", fontSize:9, fontWeight:700, padding:"3px 8px", borderRadius:6, fontFamily:"monospace", backdropFilter:"blur(4px)" }}>⬡ THREE.JS / WEBGL</div>
+    </div>
+  );
+}
+
 function ProjectCard({ project, onClick, delay }) {
   const cardRef = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -219,9 +278,21 @@ function ProjectCard({ project, onClick, delay }) {
     cardRef.current.style.transform = `perspective(800px) rotateX(${y}deg) rotateY(${x}deg) translateY(-4px)`;
   };
 
+  const is3DCard = project.is3D;
+
   return (
-    <div ref={cardRef} onClick={onClick} onMouseMove={handleMouseMove} onMouseLeave={()=>{ if(cardRef.current) cardRef.current.style.transform=""; }}
-      style={{ background:"white", border:`1px solid rgba(0,0,0,0.07)`, borderTop:`3px solid ${project.color}`, borderRadius:18, padding:"22px 24px", cursor:"none", transition:"transform 0.15s ease, box-shadow 0.3s ease, opacity 0.5s ease", transformStyle:"preserve-3d", opacity:visible?1:0, transitionDelay:`${delay}ms`, position:"relative", overflow:"hidden", boxShadow:"0 2px 16px rgba(0,0,0,0.06)" }}
+    <div ref={cardRef} onClick={onClick} onMouseMove={handleMouseMove}
+      onMouseLeave={()=>{ if(cardRef.current) cardRef.current.style.transform=""; }}
+      style={{
+        background: "white",
+        border: "1px solid rgba(0,0,0,0.07)",
+        borderTop: `3px solid ${project.color}`,
+        borderRadius:18, padding:"22px 24px", cursor:"none",
+        transition:"transform 0.15s ease, box-shadow 0.3s ease, opacity 0.5s ease",
+        transformStyle:"preserve-3d", opacity:visible?1:0, transitionDelay:`${delay}ms`,
+        position:"relative", overflow:"hidden",
+        boxShadow: "0 2px 16px rgba(0,0,0,0.06)"
+      }}
       onMouseEnter={(e)=>{ e.currentTarget.style.boxShadow=`0 20px 48px rgba(${hexToRgb(project.color)},0.15)`; }}
       onMouseLeave={(e)=>{ e.currentTarget.style.boxShadow="0 2px 16px rgba(0,0,0,0.06)"; }}>
 
@@ -240,7 +311,9 @@ function ProjectCard({ project, onClick, delay }) {
         <p style={{ fontSize:12,color:"#aaa",marginTop:3 }}>{project.subtitle}</p>
       </div>
 
-      <p style={{ fontSize:13,color:"#666",lineHeight:1.7,marginBottom:16,display:"-webkit-box",WebkitLineClamp:3,WebkitBoxOrient:"vertical",overflow:"hidden" }}>{project.description}</p>
+      {is3DCard && <SmartHomeThumbnail />}
+
+      <p style={{ fontSize:13,color:"#666",lineHeight:1.7,marginBottom:16,display:"-webkit-box",WebkitLineClamp:is3DCard?2:3,WebkitBoxOrient:"vertical",overflow:"hidden" }}>{project.description}</p>
 
       <div style={{ display:"flex",flexWrap:"wrap",gap:6,marginBottom:18 }}>
         {project.stack.slice(0,4).map((t)=>(

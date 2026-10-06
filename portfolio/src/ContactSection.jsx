@@ -21,11 +21,11 @@ function useOnlineCount() {
 
 /* ─── CONTACT INFO ─── */
 const CONTACTS = [
-  { icon: "🐙", label: "GitHub",    text: "github.com/tonnyheru",      href: "https://github.com/tonnyheru" },
-  { icon: "📸", label: "Instagram", text: "instagram.com/tonnyheru",   href: "https://instagram.com/tonnyheru" },
-  { icon: "💼", label: "LinkedIn",  text: "linkedin.com/tonnyheru", href: "https://www.linkedin.com/in/tonny-heru-a83279297/" },
-  { icon: "✉️", label: "Email",     text: "tonnyheru29@gmail.com",     href: "https://mail.google.com/mail/?view=cm&to=tonnyheru29@gmail.com" },
-  { icon: "📍", label: "Lokasi",    text: "Bandung, Indonesia",          href: null },
+  { icon: "🐙", label: "GitHub",    text: "github.com/tonnyheru",      href: null },
+  { icon: "📸", label: "Instagram", text: "instagram.com/tonnyheru",   href: null },
+  { icon: "💼", label: "LinkedIn",  text: "linkedin.com/tonnyheru", href: null },
+  { icon: "✉️", label: "Email",     text: "tonnyheru29@gmail.com",     href: null },
+  { icon: "📍", label: "Lokasi",    text: "Bandung, WestJava, Indonesia",          href: null },
 ];
 
 export default function ContactSection({ onMessagesChange }) {
