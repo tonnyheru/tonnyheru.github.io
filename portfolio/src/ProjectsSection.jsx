@@ -115,9 +115,35 @@ const PROJECTS = [
     color: "#00d4ff",
     is3D: true,
   },
+  {
+    id: 6,
+    title: "Aplikasi Ice Cream Diaz",
+    subtitle: "Aplikasi Pemesanan & Kasir Es Krim",
+    category: "Mobile App",
+    featured: false,
+    status: "demo",
+    statusLabel: "Open Source",
+    org: "Personal Project",
+    duration: "2026",
+    role: "Full Stack Developer",
+    score: null,
+    description: "Aplikasi pemesanan dan kasir es krim berbasis JavaScript. Memudahkan pengelolaan menu, transaksi penjualan, dan laporan secara digital. Dibangun sebagai solusi modern untuk usaha es krim kecil hingga menengah.",
+    highlights: [
+      "Manajemen menu es krim dengan berbagai varian rasa dan topping",
+      "Sistem kasir digital untuk proses transaksi yang cepat dan akurat",
+      "Rekap dan laporan penjualan harian",
+      "Antarmuka yang ramah pengguna dan responsif",
+      "Source code terbuka dan tersedia di GitHub",
+    ],
+    stack: ["JavaScript","HTML","CSS"],
+    images: [],
+    link: "https://github.com/tonnyheru/Aplikasi_Ice_Cream_Diaz",
+    linkLabel: "Lihat di GitHub",
+    color: "#f59e0b",
+  },
 ];
 
-const CATEGORIES = ["Semua","Web App","Frontend","Backend","3D/WebGL"];
+const CATEGORIES = ["Semua","Web App","Frontend","Backend","3D/WebGL","Mobile App"];
 
 function hexToRgb(hex) {
   return `${parseInt(hex.slice(1,3),16)},${parseInt(hex.slice(3,5),16)},${parseInt(hex.slice(5,7),16)}`;
