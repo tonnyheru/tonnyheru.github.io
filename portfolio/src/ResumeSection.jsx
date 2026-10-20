@@ -34,7 +34,7 @@ const TIMELINE = [
     type: "work",
     icon: "🎨",
     title: "Graphic Designer",
-    subtitle: "Papyrus Photo",
+    subtitle: "Fitria Photo",
     period: "Sep 2020 – Agt 2022",
     color: "#DC143C",
     description: "Menghasilkan materi desain grafis cetak dan digital (poster, banner, album foto, materi promosi). Melakukan photo editing & retouching menggunakan Adobe Photoshop, CorelDRAW, dan Canva, serta berkomunikasi langsung dengan pelanggan untuk eksekusi revisi.",
