@@ -15,76 +15,81 @@ const PROJECTS = [
     duration: "6 Bulan · Feb – Agt 2025",
     role: "Full Stack Developer",
     score: "Nilai 90/100",
-    description: "Sistem administrasi peradilan terintegrasi. Terhubung dengan layanan Disdukcapil Cimahi, Kab. Bandung, dan Bandung Barat via RESTful API untuk verifikasi data warga secara otomatis.",
-    highlights: ["Requirement gathering dengan pemangku kepentingan","Perancangan database & alur sistem end-to-end","Integrasi RESTful API Disdukcapil Cimahi","Deployment hingga aktif di production","Maintenance & bug fixing pasca deployment"],
-    stack: ["PHP","Laravel","MySQL","RESTful API","JavaScript","HTML/CSS","Git"],
-    images: [{ src:"./images/login.png",caption:"Halaman Login" },{ src:"./images/dashboard.png",caption:"Dashboard Utama" },{ src:"./images/modul.png",caption:"Halaman Modul" }],
+    description: "Sistem administrasi peradilan terintegrasi yang dibangun secara mandiri untuk Pengadilan Negeri Bale Bandung. Terhubung langsung dengan layanan Disdukcapil Cimahi, Kab. Bandung, dan Kab. Bandung Barat melalui RESTful API untuk verifikasi data kependudukan pemohon secara otomatis dan real-time.",
+    highlights: [
+      "Requirement gathering intensif dengan pemangku kepentingan Pengadilan & Disdukcapil",
+      "Perancangan database relasional, skema tabel, dan alur sistem end-to-end",
+      "Integrasi RESTful API Disdukcapil (Cimahi, Kab. Bandung, Bandung Barat)",
+      "Fitur pendaftaran pemohon, usulan pengajuan, manajemen modul, user, dan role",
+      "Sistem notifikasi otomatis via Email untuk pembaruan status pengajuan",
+      "Deployment hingga aktif digunakan di production lingkungan instansi",
+      "Maintenance, optimalisasi performa, dan bug fixing pasca deployment",
+    ],
+    stack: ["PHP", "Laravel", "MySQL", "RESTful API", "JavaScript", "HTML/CSS", "Git"],
+    images: [
+      { src: "./img Pengadilan Negeri Bale Bandung/dashboard utama.png", caption: "Dashboard Utama Layung Peradilan" },
+      { src: "./img Pengadilan Negeri Bale Bandung/menu login.png", caption: "Halaman Login Sistem Layung Peradilan" },
+      { src: "./img Pengadilan Negeri Bale Bandung/dashboard usulan pengajuan.png", caption: "Dashboard Usulan Pengajuan Pemohon" },
+      { src: "./img Pengadilan Negeri Bale Bandung/dashboard untuk mendaftarkan pemohon.png", caption: "Form Registrasi & Pendaftaran Pemohon" },
+      { src: "./img Pengadilan Negeri Bale Bandung/dashboard untuk mendaftarkan disdukcapil.png", caption: "Form Pendaftaran Integrasi Disdukcapil" },
+      { src: "./img Pengadilan Negeri Bale Bandung/dashboard manajemen user.png", caption: "Manajemen Pengguna & Pegawai" },
+      { src: "./img Pengadilan Negeri Bale Bandung/dashboard manajemen role.png", caption: "Manajemen Role & Hak Akses Pengguna" },
+      { src: "./img Pengadilan Negeri Bale Bandung/dashboard managemen modul.png", caption: "Manajemen Modul Layanan Peradilan" },
+      { src: "./img Pengadilan Negeri Bale Bandung/dashboard profile.png", caption: "Halaman Pengaturan Profil Pengguna" },
+      { src: "./img Pengadilan Negeri Bale Bandung/notifikasi email.png", caption: "Notifikasi Otomatis Dispatch Email" },
+    ],
     link: "https://layungperadilan.pn-balebandung.go.id/login",
     linkLabel: "Lihat Langsung",
     color: "#DC143C",
   },
   {
     id: 2,
-    title: "Portofolio Website",
-    subtitle: "Personal Portfolio & Showcase",
-    category: "Frontend",
-    featured: false,
-    status: "live",
-    statusLabel: "Live",
+    title: "Renato Kitchen & Resto",
+    subtitle: "Sistem Manajemen Terintegrasi Restoran & Kitchen berbasis Laravel & React TypeScript",
+    category: "Web App",
+    featured: true,
+    status: "production",
+    statusLabel: "Open Source / Full Stack",
     org: "Personal Project",
     duration: "2026",
-    role: "Frontend Developer",
+    role: "Full Stack Developer",
     score: null,
-    description: "Website portofolio personal dengan React + Vite + Tailwind CSS. Dilengkapi live chat room Firebase, particle canvas interaktif, custom cursor, dan animated counters.",
-    highlights: ["Particle canvas interaktif dengan cursor tracking","Live chat room real-time via Firebase Firestore","Online presence counter dengan Firebase RTDB","Animated skill marquee & 3D tilt cards","EmailJS untuk form kontak langsung"],
-    stack: ["React","Vite","Tailwind CSS","Firebase","EmailJS","JavaScript"],
-    images: [],
-    link: "https://tonnyheru.github.io",
-    linkLabel: "Buka Website",
-    color: "#4079ff",
+    description: "Sistem manajemen operasional terintegrasi restoran dan kitchen modern berbasis Laravel & React TypeScript. Dirancang untuk efisiensi F&B menyeluruh, mencakup Point of Sale (POS) kasir cepat, Kitchen Display System (KDS) real-time untuk kru dapur, denah & manajemen status meja, kontrol inventaris stok bahan baku otomatis terintegrasi formula resep (Bill of Materials), stock opname berkala, pengadaan (procurement) & manajemen supplier, pelacakan biaya operasional resto, laporan keuangan & analitik performa bisnis mendalam, hingga pembayaran digital QRIS dinamis.",
+    highlights: [
+      "Point of Sale (POS) cepat dengan visualisasi katalog menu, varian rasa, diskon, dan cetak struk kasir",
+      "Kitchen Display System (KDS) real-time untuk koordinasi otomatis antara kru dapur dan pramusaji",
+      "Interactive Table Management & floor plan denah meja dengan visualisasi status pesanan real-time",
+      "Manajemen Menu, Kategori, Resep (BOM) & otomatisasi pengurangan stok bahan baku per pesanan",
+      "Inventaris Bahan Baku Real-time & fitur Stock Opname berkala untuk audit dan pencegahan selisih stok",
+      "Modul Pembelian (Purchasing) & Manajemen Supplier untuk efisiensi rantai pasok restoran",
+      "Pencatatan Biaya Operasional & Pengeluaran harian/bulanan restoran secara rapi dan terstruktur",
+      "Laporan Bisnis & Analitik Omzet mendalam dengan metrik grafik penjualan, laba rugi, dan margin",
+      "Integrasi Pembayaran Digital QRIS dinamis untuk kemudahan proses transaksi pelanggan",
+      "Multi-Role Permission System (Admin/Owner, Manager, Kasir, Koki Dapur) dan logging aktivitas sistem",
+    ],
+    stack: ["Laravel", "React", "TypeScript", "Tailwind CSS", "MySQL", "RESTful API", "Vite"],
+    images: [
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar overview.png", caption: "Dashboard Overview & Metrik Resto" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar point of sale.png", caption: "Point of Sale (POS) Kasir Resto" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar kitchen display.png", caption: "Kitchen Display System (KDS) Real-time" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar orders.png", caption: "Manajemen Pesanan & Status Order" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar menu & resep.png", caption: "Manajemen Menu & Formula Resep (BOM)" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar manajamen meja.png", caption: "Manajemen Layout & Denah Meja Resto" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar investaris stock.png", caption: "Inventaris Bahan Baku & Stok" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar stock opname.png", caption: "Pencatatan & Audit Stock Opname" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar pembelian & supplier.png", caption: "Pengadaan Bahan & Manajemen Supplier" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar pengeluaran.png", caption: "Pencatatan Biaya Operasional Resto" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar laporan bisnis.png", caption: "Laporan Bisnis, Omzet & Analitik Margin" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar staff & pengguna.png", caption: "Manajemen Karyawan & Hak Akses Multi-role" },
+      { src: "./img Aplikasi Renato kitchen Resto/tampilan dashboar Pengaturan resto.png", caption: "Pengaturan Restoran & Konfigurasi Sistem" },
+      { src: "./img Aplikasi Renato kitchen Resto/pembayaran transaksi qris.png", caption: "Metode Pembayaran Digital QRIS" },
+    ],
+    link: "https://github.com/tonnyheru/Aplikasi_Renato_Kitchen_Resto",
+    linkLabel: "Lihat di GitHub",
+    color: "#f43f5e",
   },
   {
     id: 3,
-    title: "API Integration Module",
-    subtitle: "Disdukcapil Data Verifier",
-    category: "Backend",
-    featured: false,
-    status: "production",
-    statusLabel: "Production",
-    org: "Pengadilan Negeri Bale Bandung",
-    duration: "2025",
-    role: "Backend Developer",
-    score: null,
-    description: "Modul integrasi API yang menghubungkan sistem Layung Peradilan dengan tiga layanan Disdukcapil berbeda untuk verifikasi data kependudukan secara otomatis dan real-time.",
-    highlights: ["Konsumsi endpoint API Disdukcapil Cimahi","Validasi NIK & data kependudukan otomatis","Error handling & fallback mechanism","Response caching untuk performa optimal","Logging & monitoring request/response"],
-    stack: ["PHP","Laravel","RESTful API","JSON","MySQL","Postman"],
-    images: [],
-    link: null,
-    linkLabel: null,
-    color: "#059669",
-  },
-  {
-    id: 4,
-    title: "Database Architecture",
-    subtitle: "Relational DB Design — Peradilan",
-    category: "Backend",
-    featured: false,
-    status: "production",
-    statusLabel: "Production",
-    org: "Pengadilan Negeri Bale Bandung",
-    duration: "2025",
-    role: "Database Engineer",
-    score: null,
-    description: "Perancangan arsitektur database relasional untuk sistem administrasi peradilan. Mencakup manajemen pengguna, tracking status, laporan digital, dan audit trail.",
-    highlights: ["Entity Relationship Diagram (ERD) lengkap","Normalisasi hingga 3NF","Indexing untuk query performance","Stored procedures & views","Audit trail & soft delete mechanism"],
-    stack: ["MySQL","SQL","ERD","Laravel Eloquent","PHP"],
-    images: [],
-    link: null,
-    linkLabel: null,
-    color: "#7c3aed",
-  },
-  {
-    id: 5,
     title: "Smart Home 3D + IoT",
     subtitle: "Interactive 3D Villa & Full IoT Smart Home Dashboard",
     category: "3D/WebGL",
@@ -108,15 +113,49 @@ const PROJECTS = [
       "Energy Monitoring: Kalkulasi wattage real-time, daily kWh, monthly cost, dan kurva konsumsi 24 jam",
       "Day / Night Cycle: Transisi dinamis pencahayaan matahari/bulan, langit, bayangan, dan neon glow",
     ],
-    stack: ["Three.js","React","WebGL","Tailwind CSS","Lucide Icons","Canvas API","Web Audio API"],
-    images: [{ src:"./images/smarthome-3d.svg", caption:"3D Smart Home + IoT Dashboard" }],
+    stack: ["Three.js", "React", "WebGL", "Tailwind CSS", "Lucide Icons", "Canvas API", "Web Audio API"],
+    images: [{ src: "./images/smarthome-3d.svg", caption: "3D Smart Home + IoT Dashboard" }],
     link: null,
     linkLabel: null,
     color: "#00d4ff",
     is3D: true,
   },
   {
-    id: 6,
+    id: 4,
+    title: "Portofolio Website",
+    subtitle: "Personal Portfolio & Showcase",
+    category: "Frontend",
+    featured: false,
+    status: "live",
+    statusLabel: "Live",
+    org: "Personal Project",
+    duration: "2026",
+    role: "Frontend Developer",
+    score: null,
+    description: "Website portofolio personal responsif dibangun dengan React 19 + Vite + Tailwind CSS. Dilengkapi showcase proyek interaktif, live chat room real-time via Firebase Firestore, particle canvas interaktif dengan mouse tracking, custom cyber cursor, animated marquee tech stack, dan integrasi EmailJS untuk pengiriman pesan langsung.",
+    highlights: [
+      "Particle canvas dinamis interaktif dengan cursor tracking & network constellation",
+      "Live chat room real-time via Firebase Firestore dengan filter username & custom avatar",
+      "Online presence counter real-time dengan Firebase RTDB",
+      "Animated skill marquee, interactive 3D tilt cards, dan glassmorphism aesthetics",
+      "Modal galeri showcase proyek dengan navigasi keyboard & screenshot interaktif",
+      "Integrasi EmailJS untuk form pesan kontak langsung ke email pribadi",
+    ],
+    stack: ["React", "Vite", "Tailwind CSS", "Firebase", "EmailJS", "JavaScript"],
+    images: [
+      { src: "./img portofolio/halaman home.png", caption: "Halaman Utama & Visual Hero" },
+      { src: "./img portofolio/halaman about.png", caption: "Halaman Tentang Saya & Profil" },
+      { src: "./img portofolio/halaman project.png", caption: "Showcase Proyek & Filter Interaktif" },
+      { src: "./img portofolio/halaman tools.png", caption: "Keahlian & Ekosistem Tools" },
+      { src: "./img portofolio/halaman resume.png", caption: "Pengalaman Kerja & Riwayat Pendidikan" },
+      { src: "./img portofolio/halaman contact.png", caption: "Formulir Kontak Langsung & Live Chat" },
+    ],
+    link: "https://tonnyheru.github.io",
+    linkLabel: "Buka Website",
+    color: "#4079ff",
+  },
+  {
+    id: 5,
     title: "Aplikasi Ice Cream Diaz",
     subtitle: "Aplikasi Pemesanan & Kasir Es Krim",
     category: "Mobile App",
@@ -127,19 +166,89 @@ const PROJECTS = [
     duration: "2026",
     role: "Full Stack Developer",
     score: null,
-    description: "Aplikasi pemesanan dan kasir es krim berbasis JavaScript. Memudahkan pengelolaan menu, transaksi penjualan, dan laporan secara digital. Dibangun sebagai solusi modern untuk usaha es krim kecil hingga menengah.",
+    description: "Aplikasi pemesanan dan kasir es krim modern berbasis JavaScript, HTML, dan CSS. Memudahkan pengelolaan varian menu, transaksi kasir Point of Sale (POS), pencatatan inventaris stok bahan & es krim, integrasi pembayaran digital via QRIS, dan rekap laporan omzet penjualan secara digital untuk UMKM.",
     highlights: [
-      "Manajemen menu es krim dengan berbagai varian rasa dan topping",
-      "Sistem kasir digital untuk proses transaksi yang cepat dan akurat",
-      "Rekap dan laporan penjualan harian",
-      "Antarmuka yang ramah pengguna dan responsif",
-      "Source code terbuka dan tersedia di GitHub",
+      "Manajemen menu es krim dengan berbagai pilihan varian rasa, ukuran, dan aneka topping",
+      "Sistem kasir digital POS yang cepat, akurat, dan mudah digunakan kasir",
+      "Dukungan metode pembayaran digital nontunai dengan QRIS",
+      "Manajemen stok bahan baku dan peringatan stok menipis secara visual",
+      "Rekap dan laporan penjualan harian otomatis untuk analisa omzet",
+      "Antarmuka yang ramah pengguna, ringan, dan responsif di berbagai perangkat",
+      "Source code terbuka dan dapat diakses publik di GitHub",
     ],
-    stack: ["JavaScript","HTML","CSS"],
-    images: [],
+    stack: ["JavaScript", "HTML", "CSS"],
+    images: [
+      { src: "./img Aplikasi ice cream diaz/menu dahboard.png", caption: "Dashboard Manajemen Es Krim" },
+      { src: "./img Aplikasi ice cream diaz/menu kasir.png", caption: "Point of Sale (POS) Transaksi Kasir" },
+      { src: "./img Aplikasi ice cream diaz/pembayaran via qris.png", caption: "Pembayaran Transaksi via QRIS" },
+      { src: "./img Aplikasi ice cream diaz/menu prodak.png", caption: "Manajemen Katalog Produk & Varian Rasa" },
+      { src: "./img Aplikasi ice cream diaz/menu stock.png", caption: "Manajemen Stok Es Krim & Bahan" },
+      { src: "./img Aplikasi ice cream diaz/menu laporan.png", caption: "Laporan Omzet & Penjualan Harian" },
+      { src: "./img Aplikasi ice cream diaz/tampilan login.png", caption: "Halaman Login Kasir & Admin" },
+      { src: "./img Aplikasi ice cream diaz/menu lainnya.png", caption: "Menu Konfigurasi & Fitur Tambahan" },
+    ],
     link: "https://github.com/tonnyheru/Aplikasi_Ice_Cream_Diaz",
     linkLabel: "Lihat di GitHub",
     color: "#f59e0b",
+  },
+  {
+    id: 6,
+    title: "API Integration Module",
+    subtitle: "Disdukcapil Data Verifier",
+    category: "Backend",
+    featured: false,
+    status: "production",
+    statusLabel: "Production",
+    org: "Pengadilan Negeri Bale Bandung",
+    duration: "2025",
+    role: "Backend Developer",
+    score: null,
+    description: "Modul integrasi backend RESTful API yang menghubungkan sistem administrasi Layung Peradilan dengan tiga instansi Disdukcapil (Disdukcapil Cimahi, Disdukcapil Kab. Bandung, dan Disdukcapil Bandung Barat) untuk proses verifikasi dan validasi data kependudukan secara otomatis, terenkripsi, dan real-time.",
+    highlights: [
+      "Konsumsi endpoint API Disdukcapil Cimahi & Kab. Bandung dengan format JSON standar",
+      "Validasi NIK & data kependudukan otomatis sebelum data masuk ke berkas pengadilan",
+      "Error handling, timeout management, & fallback mechanism jika service instansi kendala",
+      "Response caching cerdas untuk mempercepat query berulang dan menghemat bandwidth",
+      "Logging & monitoring request/response secara komprehensif untuk audit keamanan",
+      "Dispatch notifikasi email otomatis ke pemohon saat usulan disetujui / ditolak",
+    ],
+    stack: ["PHP", "Laravel", "RESTful API", "JSON", "MySQL", "Postman"],
+    images: [
+      { src: "./img API integration/form login API.png", caption: "Form Autentikasi API Disdukcapil" },
+      { src: "./img API integration/API list usulan yang masuk.png", caption: "Endpoint API List Usulan Masuk" },
+      { src: "./img API integration/API approve usulan.png", caption: "Endpoint API Approval Usulan" },
+      { src: "./img API integration/API reject usulan.png", caption: "Endpoint API Penolakan Usulan" },
+      { src: "./img API integration/API send Email.png", caption: "Endpoint API Dispatch Notifikasi Email" },
+    ],
+    link: null,
+    linkLabel: null,
+    color: "#059669",
+  },
+  {
+    id: 7,
+    title: "Database Architecture",
+    subtitle: "Relational DB Design — Peradilan",
+    category: "Backend",
+    featured: false,
+    status: "production",
+    statusLabel: "Production",
+    org: "Pengadilan Negeri Bale Bandung",
+    duration: "2025",
+    role: "Database Engineer",
+    score: null,
+    description: "Perancangan arsitektur database relasional untuk sistem administrasi peradilan Layung Peradilan. Mencakup pemodelan entitas pengguna, tracking alur status perkara, pelaporan digital, dan audit trail.",
+    highlights: [
+      "Entity Relationship Diagram (ERD) komprehensif memodelkan puluhan relasi tabel",
+      "Normalisasi basis data hingga bentuk 3NF untuk integritas dan mencegah redundansi",
+      "Indexing kolom kunci untuk optimalisasi query performance pada data bervolume tinggi",
+      "Stored procedures, database views, dan triggers untuk otomasi proses data",
+      "Mekanisme audit trail log dan soft delete untuk keamanan dan riwayat kepatuhan data",
+    ],
+    stack: ["MySQL", "SQL", "ERD", "Laravel Eloquent", "PHP"],
+    images: [],
+    link: null,
+    linkLabel: null,
+    color: "#7c3aed",
   },
 ];
 
@@ -168,26 +277,44 @@ function StatusBadge({ status, label }) {
 function ProjectModal({ project, onClose }) {
   const [activeImg, setActiveImg] = useState(0);
   const overlayRef = useRef(null);
+
+  useEffect(() => {
+    setActiveImg(0);
+  }, [project]);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
-    const onKey = (e) => { if (e.key==="Escape") onClose(); };
+    const onKey = (e) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft" && project.images?.length > 1) {
+        setActiveImg((prev) => (prev === 0 ? project.images.length - 1 : prev - 1));
+      }
+      if (e.key === "ArrowRight" && project.images?.length > 1) {
+        setActiveImg((prev) => (prev === project.images.length - 1 ? 0 : prev + 1));
+      }
+    };
     window.addEventListener("keydown", onKey);
-    return () => { document.body.style.overflow=""; window.removeEventListener("keydown",onKey); };
-  }, [onClose]);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [onClose, project.images]);
 
   const is3DProject = project.is3D;
 
   return (
     <div ref={overlayRef} onClick={(e)=>{ if(e.target===overlayRef.current) onClose(); }}
-      style={{ position:"fixed",inset:0,zIndex:99999,background:"rgba(0,0,0,0.7)",backdropFilter:"blur(8px)",display:"flex",alignItems:"center",justifyContent:"center",padding:20,animation:"modalFadeIn 0.25s ease forwards" }}>
+      style={{ position:"fixed",inset:0,zIndex:99999,background:"rgba(0,0,0,0.75)",backdropFilter:"blur(8px)",display:"flex",alignItems:"center",justifyContent:"center",padding:20,animation:"modalFadeIn 0.25s ease forwards" }}>
       <style>{`
         @keyframes modalFadeIn { from{opacity:0} to{opacity:1} }
         @keyframes modalSlideUp { from{opacity:0;transform:translateY(24px) scale(0.97)} to{opacity:1;transform:translateY(0) scale(1)} }
-        .modal-scroll::-webkit-scrollbar{width:4px} .modal-scroll::-webkit-scrollbar-thumb{background:#ddd;border-radius:4px}
+        .modal-scroll::-webkit-scrollbar{width:5px;height:5px;}
+        .modal-scroll::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:999px;}
+        .modal-scroll::-webkit-scrollbar-track{background:transparent;}
       `}</style>
-      <div style={{ width:"100%",maxWidth:is3DProject?1080:760,maxHeight:"94vh",background:"white",border:"1px solid rgba(0,0,0,0.08)",borderRadius:20,overflow:"hidden",display:"flex",flexDirection:"column",animation:"modalSlideUp 0.3s ease forwards",boxShadow:"0 32px 80px rgba(0,0,0,0.2)" }}>
+      <div style={{ width:"100%",maxWidth:is3DProject?1080:820,maxHeight:"94vh",background:"white",border:"1px solid rgba(0,0,0,0.08)",borderRadius:20,overflow:"hidden",display:"flex",flexDirection:"column",animation:"modalSlideUp 0.3s ease forwards",boxShadow:"0 32px 80px rgba(0,0,0,0.3)" }}>
         {/* Header */}
-        <div style={{ padding:"24px 28px 20px",borderBottom:"1px solid #f0f0f0",display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:16,flexShrink:0,background:`linear-gradient(135deg, rgba(${hexToRgb(project.color)},0.05) 0%, white 60%)` }}>
+        <div style={{ padding:"24px 28px 20px",borderBottom:"1px solid #f0f0f0",display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:16,flexShrink:0,background:`linear-gradient(135deg, rgba(${hexToRgb(project.color)},0.06) 0%, white 65%)` }}>
           <div>
             <div style={{ display:"flex",alignItems:"center",gap:10,marginBottom:8,flexWrap:"wrap" }}>
               <StatusBadge status={project.status} label={project.statusLabel} />
@@ -246,20 +373,67 @@ function ProjectModal({ project, onClose }) {
                 <SmartHome3D />
               </Suspense>
             </div>
-          ) : project.images.length>0 && (
+          ) : project.images && project.images.length > 0 && (
             <div>
-              <p style={{ fontSize:11,fontWeight:700,color:"#bbb",textTransform:"uppercase",letterSpacing:"0.12em",marginBottom:10 }}>Screenshot</p>
-              <div style={{ borderRadius:12,overflow:"hidden",background:"#f5f5f5",aspectRatio:"16/9",position:"relative",marginBottom:10 }}>
-                <img src={project.images[activeImg].src} alt={project.images[activeImg].caption} style={{ width:"100%",height:"100%",objectFit:"cover" }} />
-                <div style={{ position:"absolute",bottom:10,left:"50%",transform:"translateX(-50%)",background:"rgba(0,0,0,0.6)",color:"white",fontSize:11,padding:"4px 12px",borderRadius:999 }}>{project.images[activeImg].caption}</div>
+              <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10 }}>
+                <p style={{ fontSize:11,fontWeight:700,color:"#888",textTransform:"uppercase",letterSpacing:"0.12em",margin:0 }}>
+                  Screenshot ({activeImg + 1} dari {project.images.length})
+                </p>
+                {project.images.length > 1 && (
+                  <div style={{ display:"flex",gap:6 }}>
+                    <button
+                      onClick={()=>setActiveImg((prev)=>(prev===0?project.images.length-1:prev-1))}
+                      style={{ padding:"4px 12px",borderRadius:6,border:"1px solid #e0e0e0",background:"#fff",fontSize:12,fontWeight:600,color:"#555",cursor:"none",transition:"all 0.2s" }}
+                      onMouseEnter={(e)=>{ e.currentTarget.style.background="#f5f5f5"; e.currentTarget.style.color="#111"; }}
+                      onMouseLeave={(e)=>{ e.currentTarget.style.background="#fff"; e.currentTarget.style.color="#555"; }}>
+                      ◀ Sebelumnya
+                    </button>
+                    <button
+                      onClick={()=>setActiveImg((prev)=>(prev===project.images.length-1?0:prev+1))}
+                      style={{ padding:"4px 12px",borderRadius:6,border:"1px solid #e0e0e0",background:"#fff",fontSize:12,fontWeight:600,color:"#555",cursor:"none",transition:"all 0.2s" }}
+                      onMouseEnter={(e)=>{ e.currentTarget.style.background="#f5f5f5"; e.currentTarget.style.color="#111"; }}
+                      onMouseLeave={(e)=>{ e.currentTarget.style.background="#fff"; e.currentTarget.style.color="#555"; }}>
+                      Berikutnya ▶
+                    </button>
+                  </div>
+                )}
               </div>
-              <div style={{ display:"flex",gap:8 }}>
-                {project.images.map((img,i)=>(
-                  <button key={i} onClick={()=>setActiveImg(i)} style={{ flex:1,aspectRatio:"16/9",borderRadius:8,overflow:"hidden",border:`2px solid ${i===activeImg?project.color:"transparent"}`,transition:"border-color 0.2s",cursor:"none" }}>
-                    <img src={img.src} alt={img.caption} style={{ width:"100%",height:"100%",objectFit:"cover" }} />
-                  </button>
-                ))}
+              <div style={{ borderRadius:12,overflow:"hidden",background:"#0a0f1d",aspectRatio:"16/9",position:"relative",marginBottom:12,boxShadow:"0 4px 20px rgba(0,0,0,0.15)",display:"flex",alignItems:"center",justifyContent:"center" }}>
+                <img
+                  src={project.images[activeImg]?.src}
+                  alt={project.images[activeImg]?.caption}
+                  style={{ width:"100%",height:"100%",objectFit:"contain" }}
+                />
+                <div style={{ position:"absolute",bottom:12,left:"50%",transform:"translateX(-50%)",background:"rgba(0,0,0,0.8)",backdropFilter:"blur(6px)",color:"white",fontSize:12,fontWeight:500,padding:"6px 18px",borderRadius:999,whiteSpace:"nowrap",maxWidth:"92%",overflow:"hidden",textOverflow:"ellipsis",boxShadow:"0 2px 10px rgba(0,0,0,0.4)" }}>
+                  {project.images[activeImg]?.caption}
+                </div>
               </div>
+              {project.images.length > 1 && (
+                <div style={{ display:"flex",gap:8,overflowX:"auto",paddingBottom:8,scrollBehavior:"smooth" }} className="modal-scroll">
+                  {project.images.map((img,i)=>(
+                    <button
+                      key={i}
+                      onClick={()=>setActiveImg(i)}
+                      style={{
+                        flex:"0 0 96px",
+                        aspectRatio:"16/9",
+                        borderRadius:8,
+                        overflow:"hidden",
+                        border:`2px solid ${i===activeImg?project.color:"#e5e7eb"}`,
+                        padding:0,
+                        background:"#0f172a",
+                        cursor:"none",
+                        transition:"all 0.2s",
+                        opacity: i===activeImg ? 1 : 0.65,
+                        transform: i===activeImg ? "scale(1.02)" : "scale(1)"
+                      }}
+                      onMouseEnter={(e)=>{ e.currentTarget.style.opacity="1"; }}
+                      onMouseLeave={(e)=>{ if(i!==activeImg) e.currentTarget.style.opacity="0.65"; }}>
+                      <img src={img.src} alt={img.caption} style={{ width:"100%",height:"100%",objectFit:"cover" }} />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           )}
           {project.link && (
@@ -279,7 +453,7 @@ function ProjectModal({ project, onClose }) {
 
 function SmartHomeThumbnail() {
   return (
-    <div style={{ width:"100%", aspectRatio:"16/9", borderRadius:10, overflow:"hidden", marginBottom:16, position:"relative", background:"#0a0e1a", border:"1px solid rgba(0,212,255,0.2)" }}>
+    <div style={{ width:"100%", aspectRatio:"16/9", borderRadius:10, overflow:"hidden", marginBottom:14, position:"relative", background:"#0a0e1a", border:"1px solid rgba(0,212,255,0.2)" }}>
       <img src="./images/smarthome-3d.svg" alt="3D Smart Home IoT Dashboard" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
       <div style={{ position:"absolute", inset:0, background:"linear-gradient(to top, rgba(0,212,255,0.08) 0%, transparent 60%)", pointerEvents:"none" }} />
       <div style={{ position:"absolute", top:8, left:8, background:"rgba(0,0,0,0.6)", border:"1px solid rgba(0,212,255,0.4)", color:"#00d4ff", fontSize:9, fontWeight:700, padding:"3px 8px", borderRadius:6, fontFamily:"monospace", backdropFilter:"blur(4px)" }}>⬡ THREE.JS / WEBGL</div>
@@ -317,38 +491,59 @@ function ProjectCard({ project, onClick, delay }) {
         transition:"transform 0.15s ease, box-shadow 0.3s ease, opacity 0.5s ease",
         transformStyle:"preserve-3d", opacity:visible?1:0, transitionDelay:`${delay}ms`,
         position:"relative", overflow:"hidden",
-        boxShadow: "0 2px 16px rgba(0,0,0,0.06)"
+        boxShadow: "0 2px 16px rgba(0,0,0,0.06)",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       }}
       onMouseEnter={(e)=>{ e.currentTarget.style.boxShadow=`0 20px 48px rgba(${hexToRgb(project.color)},0.15)`; }}
       onMouseLeave={(e)=>{ e.currentTarget.style.boxShadow="0 2px 16px rgba(0,0,0,0.06)"; }}>
 
       <div style={{ position:"absolute",top:-40,right:-40,width:140,height:140,borderRadius:"50%",background:`radial-gradient(circle, rgba(${hexToRgb(project.color)},0.06) 0%, transparent 70%)`,pointerEvents:"none" }} />
 
-      {project.featured && (
-        <div style={{ position:"absolute",top:16,right:16,background:"rgba(220,20,60,0.08)",border:"1px solid rgba(220,20,60,0.2)",color:"crimson",fontSize:10,fontWeight:700,padding:"3px 10px",borderRadius:999,textTransform:"uppercase",letterSpacing:"0.1em" }}>★ Featured</div>
-      )}
+      <div>
+        {project.featured && (
+          <div style={{ position:"absolute",top:16,right:16,background:"rgba(220,20,60,0.08)",border:"1px solid rgba(220,20,60,0.2)",color:"crimson",fontSize:10,fontWeight:700,padding:"3px 10px",borderRadius:999,textTransform:"uppercase",letterSpacing:"0.1em" }}>★ Featured</div>
+        )}
 
-      <div style={{ marginBottom:14 }}>
-        <div style={{ display:"flex",alignItems:"center",gap:8,marginBottom:10,flexWrap:"wrap" }}>
-          <StatusBadge status={project.status} label={project.statusLabel} />
-          <span style={{ fontSize:10,fontWeight:600,color:"#999",background:"#f5f5f5",border:"1px solid #eee",borderRadius:999,padding:"3px 10px" }}>{project.category}</span>
+        <div style={{ marginBottom:14 }}>
+          <div style={{ display:"flex",alignItems:"center",gap:8,marginBottom:10,flexWrap:"wrap" }}>
+            <StatusBadge status={project.status} label={project.statusLabel} />
+            <span style={{ fontSize:10,fontWeight:600,color:"#999",background:"#f5f5f5",border:"1px solid #eee",borderRadius:999,padding:"3px 10px" }}>{project.category}</span>
+          </div>
+          <h3 style={{ fontSize:17,fontWeight:700,color:"#111",margin:0,lineHeight:1.3 }}>{project.title}</h3>
+          <p style={{ fontSize:12,color:"#aaa",marginTop:3 }}>{project.subtitle}</p>
         </div>
-        <h3 style={{ fontSize:17,fontWeight:700,color:"#111",margin:0,lineHeight:1.3 }}>{project.title}</h3>
-        <p style={{ fontSize:12,color:"#aaa",marginTop:3 }}>{project.subtitle}</p>
+
+        {is3DCard ? (
+          <SmartHomeThumbnail />
+        ) : project.images && project.images.length > 0 ? (
+          <div style={{ width:"100%", aspectRatio:"16/9", borderRadius:10, overflow:"hidden", marginBottom:14, position:"relative", background:"#f1f5f9", border:"1px solid rgba(0,0,0,0.06)" }}>
+            <img
+              src={project.images[0].src}
+              alt={project.images[0].caption || project.title}
+              loading="lazy"
+              style={{ width:"100%", height:"100%", objectFit:"cover", transition:"transform 0.3s ease" }}
+              onMouseEnter={(e)=>{ e.currentTarget.style.transform="scale(1.05)"; }}
+              onMouseLeave={(e)=>{ e.currentTarget.style.transform="scale(1)"; }}
+            />
+            <div style={{ position:"absolute", bottom:8, right:8, background:"rgba(0,0,0,0.7)", backdropFilter:"blur(4px)", color:"white", fontSize:10, fontWeight:600, padding:"3px 8px", borderRadius:6, display:"flex", alignItems:"center", gap:4 }}>
+              <span>📷 {project.images.length} Gambar</span>
+            </div>
+          </div>
+        ) : null}
+
+        <p style={{ fontSize:13,color:"#666",lineHeight:1.7,marginBottom:16,display:"-webkit-box",WebkitLineClamp:(is3DCard || (project.images && project.images.length > 0)) ? 2 : 3,WebkitBoxOrient:"vertical",overflow:"hidden" }}>{project.description}</p>
+
+        <div style={{ display:"flex",flexWrap:"wrap",gap:6,marginBottom:18 }}>
+          {project.stack.slice(0,4).map((t)=>(
+            <span key={t} style={{ fontSize:11,color:"#666",background:"#f5f5f5",border:"1px solid #eee",borderRadius:6,padding:"3px 9px",fontWeight:500 }}>{t}</span>
+          ))}
+          {project.stack.length>4 && <span style={{ fontSize:11,color:"#aaa",background:"#fafafa",border:"1px solid #eee",borderRadius:6,padding:"3px 9px" }}>+{project.stack.length-4}</span>}
+        </div>
       </div>
 
-      {is3DCard && <SmartHomeThumbnail />}
-
-      <p style={{ fontSize:13,color:"#666",lineHeight:1.7,marginBottom:16,display:"-webkit-box",WebkitLineClamp:is3DCard?2:3,WebkitBoxOrient:"vertical",overflow:"hidden" }}>{project.description}</p>
-
-      <div style={{ display:"flex",flexWrap:"wrap",gap:6,marginBottom:18 }}>
-        {project.stack.slice(0,4).map((t)=>(
-          <span key={t} style={{ fontSize:11,color:"#666",background:"#f5f5f5",border:"1px solid #eee",borderRadius:6,padding:"3px 9px",fontWeight:500 }}>{t}</span>
-        ))}
-        {project.stack.length>4 && <span style={{ fontSize:11,color:"#aaa",background:"#fafafa",border:"1px solid #eee",borderRadius:6,padding:"3px 9px" }}>+{project.stack.length-4}</span>}
-      </div>
-
-      <div style={{ display:"flex",alignItems:"center",justifyContent:"space-between",paddingTop:14,borderTop:"1px solid #f0f0f0" }}>
+      <div style={{ display:"flex",alignItems:"center",justifyContent:"space-between",paddingTop:14,borderTop:"1px solid #f0f0f0",marginTop:"auto" }}>
         <span style={{ fontSize:12,color:"#bbb" }}>{project.org}</span>
         <span style={{ fontSize:12,fontWeight:600,color:project.color,display:"flex",alignItems:"center",gap:5 }}>
           Detail
